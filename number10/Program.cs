@@ -2,10 +2,8 @@
 // 645 -> 5
 // 78 -> третьей цифры нет
 
-Console.WriteLine("Введите любое трехзначное число");
+Console.WriteLine("Введите любое число");
 int n = int.Parse(Console.ReadLine());
-Console.WriteLine(n);
-int a1 = n % 10;
 
 if (n < 100)
 {
@@ -13,5 +11,12 @@ if (n < 100)
 }
 else
 {
-        Console.WriteLine(a1);
+    while (n >= 1000)
+    {
+        n = n / 10;
+    }
+    Console.WriteLine($"{n}");
+
+    int a1 = n % 10;
+    Console.WriteLine($"{a1}");
 }
